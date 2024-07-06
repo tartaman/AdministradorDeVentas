@@ -11,11 +11,11 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(800, 600)
-        self.centralwidget = QtWidgets.QWidget(MainWindow)
+class Ui_ClienteWindow(object):
+    def setupUi(self, ClienteWindow):
+        ClienteWindow.setObjectName("ClienteWindow")
+        ClienteWindow.resize(800, 600)
+        self.centralwidget = QtWidgets.QWidget(ClienteWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
         self.gridLayout.setObjectName("gridLayout")
@@ -48,33 +48,33 @@ class Ui_MainWindow(object):
         self.gridLayout.addWidget(self.EdadLine, 3, 0, 1, 1)
         spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.gridLayout.addItem(spacerItem, 6, 0, 1, 1)
-        MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        ClienteWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(ClienteWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 26))
         self.menubar.setObjectName("menubar")
-        MainWindow.setMenuBar(self.menubar)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        ClienteWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(ClienteWindow)
         self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
+        ClienteWindow.setStatusBar(self.statusbar)
 
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        self.retranslateUi(ClienteWindow)
+        QtCore.QMetaObject.connectSlotsByName(ClienteWindow)
 
-    def retranslateUi(self, MainWindow):
+    def retranslateUi(self, ClienteWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label_3.setText(_translate("MainWindow", "Teléfono"))
-        self.AgregarClienteButton.setText(_translate("MainWindow", "Agregar Cliente"))
-        self.LimpiarButton.setText(_translate("MainWindow", "Limpiar"))
-        self.label.setText(_translate("MainWindow", "Nombre completo"))
-        self.label_2.setText(_translate("MainWindow", "Edad"))
+        ClienteWindow.setWindowTitle(_translate("ClienteWindow", "MainWindow"))
+        self.label_3.setText(_translate("ClienteWindow", "Teléfono"))
+        self.AgregarClienteButton.setText(_translate("ClienteWindow", "Agregar Cliente"))
+        self.LimpiarButton.setText(_translate("ClienteWindow", "Limpiar"))
+        self.label.setText(_translate("ClienteWindow", "Nombre completo"))
+        self.label_2.setText(_translate("ClienteWindow", "Edad"))
 
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
+    ClienteWindow = QtWidgets.QMainWindow()
+    ui = Ui_ClienteWindow()
+    ui.setupUi(ClienteWindow)
+    ClienteWindow.show()
     sys.exit(app.exec_())

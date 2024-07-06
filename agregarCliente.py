@@ -1,11 +1,11 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import conection
-from RawInterfaces.AgregarCliente import Ui_MainWindow
+from RawInterfaces.AgregarCliente import Ui_ClienteWindow
 from tkinter import messagebox
-class ClienteInterface(Ui_MainWindow, QtWidgets.QMainWindow):
+class ClienteInterface(Ui_ClienteWindow, QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
-        Ui_MainWindow.setupUi(self, self)
+        Ui_ClienteWindow.setupUi(self, self)
         self.Conector = conection.Conector()
 
         #retringir la edad

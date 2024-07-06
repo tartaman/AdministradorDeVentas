@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>VentaWindow</class>
+ <widget class="QMainWindow" name="VentaWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -15,6 +15,20 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_3">
+    <item row="6" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Fecha Hoy:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCalendarWidget" name="CalendarioHoy"/>
+      </item>
+     </layout>
+    </item>
     <item row="0" column="0">
      <layout class="QGridLayout" name="gridLayout">
       <item row="2" column="0">
@@ -87,17 +101,28 @@
       </item>
      </layout>
     </item>
-    <item row="6" column="0">
-     <layout class="QVBoxLayout" name="verticalLayout">
+    <item row="7" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QLabel" name="label_2">
+       <widget class="QPushButton" name="AgregarVentaButton">
         <property name="text">
-         <string>Fecha Hoy:</string>
+         <string>Agregar venta</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QCalendarWidget" name="CalendarioHoy"/>
+       <widget class="QPushButton" name="RecargarClientesButton">
+        <property name="text">
+         <string>Recargar clientes</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="LimpiarVentaButton">
+        <property name="text">
+         <string>Limpiar</string>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>

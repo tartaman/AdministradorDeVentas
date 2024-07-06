@@ -36,3 +36,19 @@ BEGIN
 	SELECT * FROM cliente;
 END//
 DELIMITER ;
+
+DELIMITER //
+CREATE PROCEDURE agregarVenta (IN FechaVisita date,IN IdCliente int,IN ModeloLentes varchar(100), IN TipoDeMica varchar(100), IN Costo decimal,IN Abono decimal, IN Saldo decimal)
+BEGIN
+	INSERT INTO venta(fechaVisita, IdCliente, modeloLentes, tipoDeMica, costo, abono, saldo) VALUES (FechaVisita, IdCliente, modeloLentes, TipoDeMica, Costo, Abono, Saldo);
+END//
+DELIMITER ;
+CALL agregarVenta('2024/07/03', 9, "Polaroid", "Progresivos", 1000,100,1000-100)
+DELIMITER //
+CREATE PROCEDURE actualizarSaldoPendiente (IN Saldo decimal, IN IdCliente int, IN anteriorSaldo decimal)
+BEGIN
+	UPDATE cliente
+    SET saldoPendiente = anteriorSaldo + Saldo
+    WHERE id_cliente = IdCliente;
+END//
+DELIMITER ;
