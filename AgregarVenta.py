@@ -30,8 +30,8 @@ class ventaInterface(Ui_VentaWindow, QtWidgets.QMainWindow):
         #crear un objeto cliente por cada uno de los clientes
         for cliente in resultados:
             clienteCreado = Cliente(cliente)
-            #print(clienteCreado.id, clienteCreado.Nombre,clienteCreado.Edad,
-            #      clienteCreado.Telefono, clienteCreado.SaldoPendiente)
+            print(clienteCreado.id, clienteCreado.Nombre,clienteCreado.Edad,
+                  clienteCreado.Telefono, clienteCreado.SaldoPendiente)
             self.ListaClientes.append(clienteCreado)
         for cliente in self.ListaClientes:
             self.ClienteCombo.addItem(cliente.Nombre)
@@ -85,6 +85,8 @@ class ventaInterface(Ui_VentaWindow, QtWidgets.QMainWindow):
         self.SaldoLine.setText("")
         self.ModeloLine.setText("")
         self.ClienteCombo.setCurrentText("")
+
+
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
