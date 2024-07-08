@@ -52,3 +52,12 @@ BEGIN
     WHERE id_cliente = IdCliente;
 END//
 DELIMITER ;
+
+DELIMITER //
+CREATE PROCEDURE getClientesConVentas ()
+BEGIN
+	SELECT id_cliente, nombre, v.id_venta, CONCAT(v.modeloLentes," ", v.tipoDeMica) AS producto_vendido, v.costo, v.fechaVisita, v.fechaLiquidacion
+	FROM cliente c
+    INNER JOIN venta v
+    ON c.id_cliente = v.IdCliente;
+END//
