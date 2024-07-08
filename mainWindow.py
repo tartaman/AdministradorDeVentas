@@ -11,19 +11,13 @@ class MainWindowu(Ui_MainWindow,QtWidgets.QMainWindow):
         self.AgregarClientesButton.clicked.connect(self.abrirClientes)
         self.AbonoClienteButton.clicked.connect(self.abrirAbonar)
     def abrirVentas(self):
-        self.window = QtWidgets.QMainWindow()
-        self.ui = ventaInterface()
-        self.ui.setupUi(self.window)
+        self.window = ventaInterface()
         self.window.show()
     def abrirClientes(self):
-        self.window = QtWidgets.QMainWindow()
-        self.ui = ClienteInterface()
-        self.ui.setupUi(self.window)
+        self.window = ClienteInterface()
         self.window.show()
     def abrirAbonar(self):
-        self.window = QtWidgets.QMainWindow()
-        self.ui = AbonarWindow()
-        self.ui.setupUi(self.window)
+        self.window = AbonarWindow()
         self.window.show()
 if __name__ == "__main__":
     import sys
